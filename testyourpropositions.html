@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listening Gap-Fill – Modern English Australia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Listening Gap-Fill: Dance & Memory</h1>
+  <p>Modern English Australia · Koala Spies Sydney</p>
+</header>
+
+<section class="instructions">
+  🎧 <strong>Listen to the song</strong> and fill in the missing <strong>prepositions</strong>.
+  <br><br>
+  <a class="pdf-button" href="LESSONPrep.pdf" download>📘 Review All Tenses</a>
+</section>
+
+<section class="audio-section">
+  <audio controls>
+    <source src="Ithinkaboutyou.mp3" type="audio/mpeg">
+  </audio>
+</section>
+
+<div class="progress-container">
+  <div class="progress-bar" id="progress-bar"></div>
+</div>
+
+<main>
+
+<video id="bg-video" autoplay muted loop playsinline>
+  <source src="missprep.mp4" type="video/mp4">
+</video>
+
+<section class="verse-card">
+
+  <!-- Each line wrapped cleanly -->
+  <div class="gap-line">I think <input class="gap" data-answer="about"> you.</div>
+  <div class="gap-line">I care <input class="gap" data-answer="about"> you.</div>
+  <div class="gap-line">I rely <input class="gap" data-answer="on"> you.</div>
+  <div class="gap-line">I depend <input class="gap" data-answer="on"> you.</div>
+  <div class="gap-line">I complain <input class="gap" data-answer="to"> you.</div>
+  <div class="gap-line">I apologise <input class="gap" data-answer="to"> you.</div>
+  <div class="gap-line">I belong <input class="gap" data-answer="to"> you.</div>
+  <div class="gap-line">I believe <input class="gap" data-answer="in"> you.</div>
+  <div class="gap-line">I think <input class="gap" data-answer="about"> you.</div>
+  <div class="gap-line">I dream <input class="gap" data-answer="about"> you.</div>
+  <div class="gap-line">I call you. I pay <input class="gap" data-answer="for"> you.</div>
+  <div class="gap-line">I hate you. I can't cope <input class="gap" data-answer="with"> you.</div>
+  <div class="gap-line">I don't worry <input class="gap" data-answer="about"> you.</div>
+  <div class="gap-line">I succeed <input class="gap" data-answer="in"> leaving you.</div>
+
+  <!-- Buttons + Score -->
+  <div style="margin-top: 1.5rem; text-align:center;">
+    <button class="check-btn" id="check-all">Check All Answers</button>
+    <button class="check-btn" id="show-answers" style="background:#1e1e1e; color:var(--accent); margin-left:8px;">Show Answers</button>
+
+    <p class="feedback" id="score-output"></p>
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <p>© Koala Spies Sydney · Modern English Australia · All Rights Reserved</p>
+
+  <nav class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="dictation.html">Dictation & Situations</a>
+    <a href="repeat.html">Repeat Sentence</a>
+    <a href="vocab.html">Vocabulary</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

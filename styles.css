@@ -1,0 +1,232 @@
+/* ===========================
+   Modern English Australia / Koala Spies Sydney Theme
+   =========================== */
+
+:root {
+  --bg: #e7eef0;         /* very light ash/blue background */
+  --card: #1f2426;       /* dark ash charcoal */
+  --ink: #0f1416;        /* near-black text */
+  --muted: #9aa6ac;      /* muted ash text */
+  --accent: #009688;     /* TEAL BLUE (new main accent) */
+  --line: #2c3234;       /* darker ash divider */
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(0,0,0,.25);
+
+  --good: #2ecc71;
+  --bad: #e74c3c;
+}
+
+
+/* ===== Instructions Block (NEW LOOK) ===== */
+.instructions {
+  text-align: center;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: rgba(255,255,255,0.8);
+  color: var(--ink);
+  backdrop-filter: blur(6px);
+  padding: 1.2rem 1.4rem;
+  margin: 1rem auto;
+  width: min(90%, 800px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* link button inside instructions */
+.instructions .pdf-button {
+  display: inline-block;
+  margin-left: 0.8rem;
+  padding: 0.3rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.instructions .pdf-button:hover {
+  opacity: .9;
+}
+
+/* ===== Header ===== */
+header {
+  background: var(--card);
+  color: var(--accent);
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+header p {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+}
+
+/* ===== Audio Section ===== */
+.audio-section {
+  text-align: center;
+  padding: 1rem;
+}
+audio {
+  width: 90%;
+  max-width: 700px;
+  border-radius: var(--radius);
+}
+
+/* ===== Progress Bar ===== */
+.progress-container {
+  width: 100%;
+  background: #ddd;
+  height: 12px;
+  margin: 1rem 0 1.5rem;
+}
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
+
+/* ===== Verse Cards ===== */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.verse-card {
+  background: white;
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ===== Each line in the exercise (IMPROVED SPACING) ===== */
+.gap-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  background: #fafafa;
+  padding: 0.7rem 0.9rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  font-size: 1.15rem;
+  margin: 0.8rem 0;
+  box-shadow: 0 2px 7px rgba(0,0,0,.08);
+}
+
+/* ===== Input Styling (Improved) ===== */
+input.gap {
+  width: 120px;
+  padding: 6px 8px;
+  margin: 0 4px;
+  border: 2px solid var(--muted);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+/* Correct + Incorrect Styles (DYNAMIC) */
+input.gap.correct {
+  border-color: var(--good);
+  background: #eafff1;
+  box-shadow: 0 0 10px rgba(46,204,113,.4);
+}
+input.gap.incorrect {
+  border-color: var(--bad);
+  background: #ffecec;
+  animation: shake 0.25s ease;
+}
+
+/* input shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(3px); }
+  50% { transform: translateX(-3px); }
+  75% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  input.gap {
+    width: 80px;
+    font-size: 0.9rem;
+  }
+  .gap-line {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--card);
+  color: var(--ink-light, #f5f5f5);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-top: 3px solid var(--accent);
+  box-shadow: 0 -4px 12px rgba(0,0,0,.3);
+}
+
+footer p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.footer-nav a {
+  background: #1e1e1e;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow);
+}
+
+.footer-nav a:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+}
+
+/* ===== Background Video Overlay ===== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -3;
+}
+
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 0.35;
+  z-index: -2;
+}
