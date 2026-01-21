@@ -9,7 +9,16 @@
 
 <body>
 <!-- Top‑left QR button -->
-<a href="https://your-qr-generator-link-here" class="qr-btn">QR Generator</a>
+<!-- Top-left QR button + popup -->
+<button type="button" class="qr-btn" id="qrBtn">QR</button>
+<div class="qr-pop" id="qrPop" hidden><div id="qrBox"></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+  const b=document.getElementById('qrBtn'), p=document.getElementById('qrPop'), box=document.getElementById('qrBox'); let made=false;
+  b.onclick=()=>{ p.hidden=!p.hidden; if(!made){ new QRCode(box,{text:location.href,width:140,height:140}); made=true; } };
+</script>
+
 
 
 <!-- Your page content here -->
@@ -85,6 +94,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
