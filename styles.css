@@ -230,3 +230,42 @@ body::before {
   opacity: 0.35;
   z-index: -2;
 }
+/* ===== GR Generator Button (Top‑Left) ===== */
+.gr-btn {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  padding: 0.45rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  box-shadow: var(--shadow);
+  z-index: 999;
+}
+.gr-btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== Back Button (Bottom) ===== */
+.back-btn {
+  display: block;
+  width: fit-content;
+  margin: 3rem auto 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--card);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  font-size: 1rem;
+  box-shadow: var(--shadow);
+  transition: all 0.25s ease;
+}
+.back-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
