@@ -1,24 +1,30 @@
 /* ===========================
    Modern English Australia / Koala Spies Sydney Theme
+   + Working QR button + popup
    =========================== */
 
 :root {
-  --bg: #e7eef0;         /* very light ash/blue background */
-  --card: #1f2426;       /* dark ash charcoal */
-  --ink: #0f1416;        /* near-black text */
-  --muted: #9aa6ac;      /* muted ash text */
-  --accent: #009688;     /* TEAL BLUE (new main accent) */
-  --line: #2c3234;       /* darker ash divider */
+  --bg: #e7eef0;
+  --card: #1f2426;
+  --ink: #0f1416;
+  --muted: #9aa6ac;
+  --accent: #009688;
+  --line: #2c3234;
   --radius: 14px;
   --shadow: 0 6px 24px rgba(0,0,0,.25);
 
   --good: #2ecc71;
   --bad: #e74c3c;
+
+  --qrSize: 140px;
 }
 
-/* ===== QR Button (Top‑Left) ===== */
-/* ===== QR Generator Button (Top‑Left) ===== */
-.qr-btn {
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{ margin:0; }
+
+/* ===== QR Button (Top-Left) ===== */
+.qr-btn{
   position: fixed;
   top: 12px;
   left: 12px;
@@ -30,12 +36,33 @@
   font-size: 0.95rem;
   box-shadow: var(--shadow);
   z-index: 999;
+  border: 0;
+  cursor: pointer;
 }
-.qr-btn:hover {
-  opacity: 0.9;
+.qr-btn:hover{ opacity: 0.9; }
+
+/* ===== QR Popup (appears under the button) ===== */
+.qr-pop{
+  position: fixed;
+  top: 56px;
+  left: 12px;
+  width: calc(var(--qrSize) + 20px);
+  background: #fff;
+  padding: 10px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  z-index: 1000;
 }
-
-
+.qr-pop #qrBox{
+  width: var(--qrSize);
+  height: var(--qrSize);
+}
+.qr-pop canvas,
+.qr-pop img{
+  display:block;
+  width: var(--qrSize) !important;
+  height: var(--qrSize) !important;
+}
 
 /* ===== Instructions Block ===== */
 .instructions {
@@ -63,9 +90,7 @@
   text-decoration: none;
   font-size: 1rem;
 }
-.instructions .pdf-button:hover {
-  opacity: .9;
-}
+.instructions .pdf-button:hover { opacity: .9; }
 
 /* ===== Header ===== */
 header {
@@ -179,6 +204,11 @@ input.gap.incorrect {
     font-size: 1rem;
     padding: 0.6rem;
   }
+  .qr-pop{
+    top: 52px;
+    width: calc(120px + 20px);
+  }
+  :root{ --qrSize: 120px; }
 }
 
 /* ===== Footer ===== */
